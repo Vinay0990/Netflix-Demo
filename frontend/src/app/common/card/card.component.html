@@ -1,10 +1,10 @@
 <h1 class="title">{{ title }}</h1>
 <div class="movies-list">
   <button class="pre-btn">
-    <img src="/assets/arrow-left.svg" alt="" (click)="scrollLeft()" />
+    <img src="/assets/images/left.svg" alt="left" (click)="scrollLeft()" />
   </button>
   <button class="nxt-btn">
-    <img src="/assets/arrow-right.svg" alt="" (click)="scrollRight()" />
+    <img src="/assets/images/right.svg" alt="right" (click)="scrollRight()" />
   </button>
   <div class="card-container" *ngIf="data">
     <div class="card" *ngFor="let d of data" (click)="onClick(d)">

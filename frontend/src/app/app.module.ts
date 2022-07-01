@@ -8,6 +8,8 @@ import { MovieComponent } from './movie/movie.component';
 import { CardComponent } from './common/card/card.component';
 import { CarouselComponent } from './common/carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ErrorComponent } from './common/error/error.component';
+import { MovieService } from './services/movie.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MovieComponent,
     CardComponent,
     CarouselComponent,
+    ErrorComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, NgbModule],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
