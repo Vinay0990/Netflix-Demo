@@ -1,1 +1,17 @@
-<p>movie works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <img
+        src="/assets/images/pic-alr.jpg"
+        alt="demo"
+        width="450px"
+        *ngIf="!movie"
+      />
+      <img [src]="movie.poster" alt="demo" width="450px" *ngIf="movie" />
+    </div>
+    <div class="col-md-7">
+      <h1>{{ movie.title }}</h1>
+    </div>
+  </div>
+</div>
+<app-card [title]="title" [data]="content"></app-card>

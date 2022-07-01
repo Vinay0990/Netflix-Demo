@@ -1,1 +1,25 @@
-<p>card works!</p>
+<h1 class="title">{{ title }}</h1>
+<div class="movies-list">
+  <button class="pre-btn">
+    <img src="/assets/arrow-left.svg" alt="" (click)="scrollLeft()" />
+  </button>
+  <button class="nxt-btn">
+    <img src="/assets/arrow-right.svg" alt="" (click)="scrollRight()" />
+  </button>
+  <div class="card-container" *ngIf="data">
+    <div class="card" *ngFor="let d of data" (click)="onClick(d)">
+      <img [src]="d.poster" class="card-img" alt="" *ngIf="d.poster" />
+      <img
+        src="/assets/images/pic-alr.jpg"
+        class="card-img"
+        alt=""
+        *ngIf="!d.poster"
+      />
+      <div class="card-body">
+        <h2 class="name">{{ d.title }}</h2>
+        <h6 class="des">{{ d.plot }}</h6>
+        <button class="watchlist-btn">add to watchlist</button>
+      </div>
+    </div>
+  </div>
+</div>
